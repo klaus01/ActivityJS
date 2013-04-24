@@ -1,5 +1,5 @@
 /*
-  移动抢50话费活动地址
+	移动抢50话费活动地址
 	http://www.sc.10086.cn/giveMoeny.do?dispatch=index
 	
 	方法：Firefox打开上面的网址，登录，登录后回到活动页面在浏览器Firebug插件中执行此脚本所有代码。之后只需要不停的输入验证码及可。
