@@ -15,12 +15,15 @@
 	新都和顺广场店=831
 	金牛万达广场店=834
 */
-var vCinemaId = 307;//<--根据上面的影院列表设置你要抢的影院ID
+const C_CINEMA_ID = 307;//<--根据上面的影院列表设置你要抢的影院ID
+const C_COMMIT_INTERVAL = 500;
 const C_SUCCESS_MSG = "00";
-var vInterval = setInterval(function(){
+const C_ERROR_NOTLOGIN = "05"
+var vInterval = null;
+function qiangpiao() {
 	$.ajax({type:"POST", 
 		url:basePath+"christmasSecondSkill.do?",
-		data:"m=goSkill&cinemaId=" + vCinemaId + "&sid=" + Math.random(),
+		data:"m=goSkill&cinemaId=" + C_CINEMA_ID + "&sid=" + Math.random(),
 		dataType:"text",
 		timeout:30000,
 		error:null,
@@ -31,7 +34,7 @@ var vInterval = setInterval(function(){
 				$("#cinema_wrapper2").children("#" + C_SUCCESS_MSG).show().siblings("div,ul").hide();
 				$("#ts_tip").click();
 			}
-			else if (msg = "05")
+			else if (msg == C_ERROR_NOTLOGIN)
 			{
 				window.clearInterval(vInterval);
 				alert("没登录，快点去登录");
@@ -41,4 +44,6 @@ var vInterval = setInterval(function(){
 		}, 
 		complete:null
 	});
-}, 500);
+}
+vInterval = setInterval(qiangpiao(), C_COMMIT_INTERVAL);
+qiangpiao();
