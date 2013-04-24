@@ -1,5 +1,5 @@
 /*
-  抢万达电影票
+	抢万达电影票
 	http://www.wandafilm.com/christmasSecondSkill.do?m=getPreSuccessUsers
 	
 	使用方法：
