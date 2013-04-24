@@ -31,6 +31,11 @@ var vInterval = setInterval(function(){
 				$("#cinema_wrapper2").children("#" + C_SUCCESS_MSG).show().siblings("div,ul").hide();
 				$("#ts_tip").click();
 			}
+			else if (msg = "05")
+			{
+				window.clearInterval(vInterval);
+				alert("没登录，快点去登录");
+			}
 			else
 				console.log($("#cinema_wrapper2").children("#" + msg).text());
 		}, 
