@@ -23,7 +23,7 @@ var vInterval = setInterval(function(){
 		data:"m=goSkill&cinemaId=" + vCinemaId + "&sid=" + Math.random(),
 		dataType:"text",
 		timeout:30000,
-		error:function (XMLHttpRequest, textStatus, errorThrown) {},
+		error:null,
 		success:function (msg) {
 			if (msg == C_SUCCESS_MSG)
 			{
@@ -39,6 +39,6 @@ var vInterval = setInterval(function(){
 			else
 				console.log($("#cinema_wrapper2").children("#" + msg).text());
 		}, 
-		complete:function (XMLHttpRequest, textStatus) {}
+		complete:null
 	});
 }, 500);
