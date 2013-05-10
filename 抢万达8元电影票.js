@@ -3,9 +3,10 @@
 	http://www.wandafilm.com/christmasSecondSkill.do?m=getPreSuccessUsers
 	
 	使用方法：
-	1、登录万达网站http://www.wandafilm.com/，登录时最好选中自动登录。
-	2、设置好代码中的抢票影院ID。
-	3、打开上面的活动页面，等抢票时间还有几秒中的时候执行下面的JS代码。
+	1、校对本机时间与北京时间一致。http://open.baidu.com/special/time/
+	2、登录万达网站http://www.wandafilm.com/，登录时最好选中自动登录。
+	3、设置好代码中的 抢票影院ID 和 抢票时间点。
+	4、打开活动页面http://www.wandafilm.com/christmasSecondSkill.do?m=getPreSuccessUsers，运行代码。
 
 	财富广场店		= 305
 	SM广场店		= 306
