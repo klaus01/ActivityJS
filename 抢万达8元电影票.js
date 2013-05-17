@@ -6,7 +6,7 @@
 	1、校对本机时间与北京时间一致。http://open.baidu.com/special/time/
 	2、打开万达网站http://www.wandafilm.com/，登录你的万达账号，登录时选中自动登录。
 	3、设置好代码中的 抢票影院ID 和 抢票时间点。
-	4、打开活动页面http://www.wandafilm.com/christmasSecondSkill.do?m=getPreSuccessUsers，运行代码。
+	4、打开活动页面http://www.wandafilm.com/christmasSecondSkill.do?m=getPreSuccessUsers，运行代码，之后就不用管了，到点后自动抢票。
 
 	财富广场店		= 305
 	SM广场店		= 306
