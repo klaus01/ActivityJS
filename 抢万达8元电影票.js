@@ -61,7 +61,7 @@ var gBeginTime = new Date();
 	gBeginTime.setHours(C_BEGIN_HOURS);
 	gBeginTime.setMinutes(0);
 	gBeginTime.setSeconds(0);
-	gBeginTime.setTime(gBeginTime.getTime() - 7000);
+	gBeginTime.setTime(gBeginTime.getTime() - 3000);
 
 var gBT = new Date();
 var gServerTime = GetServerTime();
