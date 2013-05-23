@@ -16,6 +16,7 @@ document.getElementById("fakecode").onkeyup = function(){
 	if (fakecodeObj.value.length != 4) return;
 	$.post("/giveMoeny.do?dispatch=insUser",{fakecode: fakecodeObj.value,value:'网厅缴费最优惠'},function(text){
 		show(document.getElementById('txtVcode'));
+		document.getElementById("value").value = text;
 		console.log(text);
 		if(text=="6000"){
 			console.log("尊敬的用户,请输入正确的验证!");
