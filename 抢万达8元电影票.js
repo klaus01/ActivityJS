@@ -40,9 +40,13 @@ function newQiangPiao() {
 				window.clearInterval(vPostInterval);
 				$("#cinema_wrapper2").children("#" + C_SUCCESS_MSG).show().siblings("div,ul").hide();
 				$("#ts_tip").click();
+				console.log("抢票成功！");
 			}
 			else if (msg == C_ERROR_NOTLOGIN)
+			{
+				window.clearInterval(vPostInterval);
 				alert("没登录，快点去登录");
+			}
 			else
 				console.log($("#cinema_wrapper2").children("#" + msg).text());
 		}, 
@@ -71,9 +75,13 @@ var vTimeInterval = setInterval(function(){
 	gServerTime.setTime(gServerTime.getTime() + 1000);
 	if (gServerTime >= gBeginTime)
 	{
-		vPostInterval = setInterval(newQiangPiao(), 100);
+		vPostInterval = setInterval(function(){newQiangPiao();}, 100);
 		window.clearInterval(vTimeInterval);
-		console.log("时间到了");
+		setTimeout(function(){
+			window.clearInterval(vPostInterval);
+			console.log("抢票结束");
+		}, 20000);
+		console.log("时间到了，开始抢票");
 	}
 	else
 		console.log("时间没到");
