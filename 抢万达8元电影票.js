@@ -22,7 +22,8 @@
 const C_CINEMA_ID = 834;//<--根据上面的影院列表设置你要抢的影院ID
 const C_BEGIN_HOURS = 12;//<--抢票时间点 小时（24小时制，现在有三个时间点10、12、14）
 const C_SUCCESS_MSG = "00";
-const C_ERROR_NOTLOGIN = "05"
+const C_ERROR_NOTLOGIN = "05";
+var vPostInterval;
 function newQiangPiao() {
 	$("#sel_cinema").text($("#" + C_CINEMA_ID).text());
 	selCityCode = "4905168908";
@@ -36,16 +37,14 @@ function newQiangPiao() {
 		success:function (msg) {
 			if (msg == C_SUCCESS_MSG)
 			{
+				window.clearInterval(vPostInterval);
 				$("#cinema_wrapper2").children("#" + C_SUCCESS_MSG).show().siblings("div,ul").hide();
 				$("#ts_tip").click();
 			}
 			else if (msg == C_ERROR_NOTLOGIN)
 				alert("没登录，快点去登录");
 			else
-			{
 				console.log($("#cinema_wrapper2").children("#" + msg).text());
-				newQiangPiao();
-			}
 		}, 
 		complete:function (XMLHttpRequest, textStatus) {}
 	});
@@ -68,12 +67,12 @@ var gServerTime = GetServerTime();
 var gET = new Date();
 	gServerTime.setTime(gServerTime.getTime() + (gET.getTime() - gBT.getTime()));
 
-var vInterval = setInterval(function(){
+var vTimeInterval = setInterval(function(){
 	gServerTime.setTime(gServerTime.getTime() + 1000);
 	if (gServerTime >= gBeginTime)
 	{
-		newQiangPiao();
-		window.clearInterval(vInterval);
+		vPostInterval = setInterval(newQiangPiao(), 100);
+		window.clearInterval(vTimeInterval);
 		console.log("时间到了");
 	}
 	else
