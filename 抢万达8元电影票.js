@@ -6,7 +6,6 @@
 	1、打开万达网站http://www.wandafilm.com/，登录你的万达账号，登录时选中自动登录。
 	2、设置好代码中的 抢票影院ID 和 抢票时间点。
 	3、打开活动页面http://www.wandafilm.com/christmasSecondSkill.do?m=getPreSuccessUsers，运行代码，之后就不用管了，到点后自动抢票。
-	注意：一个账号一天只能抢一次，不管你有没有抢到。
 */
 
 
