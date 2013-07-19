@@ -8,7 +8,7 @@
 // 保持登录状态代码
 setInterval(function(){
 	$.get("http://www.sc.10086.cn/pageViewAction.do?dispatch=businessPvUv&businessName=5000&url=scMobile");
-}, 110000);
+}, 30000);
 
 // 验证码文本框自动提交代码
 document.getElementById("fakecode").onkeyup = function(){
