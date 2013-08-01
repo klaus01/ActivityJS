@@ -14,7 +14,7 @@ setInterval(function(){
 document.getElementById("fakecode").onkeyup = function(){
 	var fakecodeObj = document.getElementById("fakecode");
 	if (fakecodeObj.value.length != 5) return;
-	$.post("/giveMoeny.do?dispatch=insUser",{fakecode: fakecodeObj.value,value:'网厅缴费最优惠'},function(text){
+	$.post("/giveMoeny.do?dispatch=insUser",{fakecode: fakecodeObj.value.trim(),value:'网厅缴费最优惠'},function(text){
 		show(document.getElementById('txtVcode'));
 		document.getElementById("value").value = text;
 		console.log(text);
