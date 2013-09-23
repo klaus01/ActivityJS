@@ -1,5 +1,9 @@
 /* 查看验证码
+
+
 document.getElementById("img1");
+
+
 */
 
 
@@ -39,18 +43,21 @@ function RefreshPBInfo() {
             "docid": C_docid
         },
         success: function(htmlstr) {
-            console.log(htmlstr);
+            //console.log(htmlstr);
             var regStr = '<a [^>]*id="a_' + C_hosid + '_([^"]*)[^>]*">' + C_GHDate;
             var reg = new RegExp(regStr);
             var r = htmlstr.match(reg);
             if (r != null) {
                 gWorkID = r[1];
                 console.log("找到日期了，workid=" + gWorkID);
-                window.clearInterval(gRefreshPBInterval);
+                
+                Registered();
                 setInterval(function() {
-                    Registered()
+                    Registered();
                 },
                 1000);
+                
+                window.clearInterval(gRefreshPBInterval);
             }
             else console.log("没找到指定日期" + regStr);
         }
