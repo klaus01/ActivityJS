@@ -10,9 +10,23 @@ document.getElementById("img1");
 const C_VerificationCode 	= "5041"; 					//验证码
 const C_GHDate 				= "2013-10-08"; 			//预约日期
 const C_hosCard 			= "0001881321"; 			//就诊卡号
-const C_hosid 				= "007"; 					//医院ID
-const C_deptid 				= "CKMZ-产科门诊--产科"; 	//科室名称
-const C_docid 				= "王晓东"; 				//医生名称
+
+// 获取Url参数值
+function getUrlParam(paramName) {
+	var urlParamsStr = location.search.substring(1);
+	var pararmArray = urlParamsStr.split("&");
+	if (pararmArray != null)
+		for (var i = 0; i < pararmArray.length; i++) {
+			var p1Array = pararmArray[i].split("=");
+			if (p1Array[0] == paramName)
+				return decodeURI(p1Array[1]);
+		}
+	 return null;
+}
+
+const C_hosid  = getUrlParam("hosid");//医院ID
+const C_deptid = getUrlParam("deptid");//科室名称
+const C_docid  = getUrlParam("docid");//医生名称
 
 var gWorkID = "";
 var gCardInfoJson = null;
