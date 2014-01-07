@@ -9,7 +9,7 @@ document.getElementById("img1");
 
 const C_VerificationCode 	= "5041"; 					//验证码
 const C_GHDate 				= "2014-02-11"; 			//预约日期
-const C_hosCard 			= "0001881321"; 			//就诊卡号
+const C_hosCard 			= "0001881321"; 			//就诊卡号。测试号：0001881318
 
 // 获取Url参数值
 function getUrlParam(paramName) {
