@@ -76,12 +76,12 @@ document.body.appendChild(gVerificationCode);
 //预约日期输入框
 var gGHDate = document.createElement("input");
 gGHDate.type = "text";
-gGHDate.value = "2014-02-11";
+gGHDate.value = "2014-11-27";
 document.body.appendChild(gGHDate);
 //就诊卡号输入框。测试号：0001881318 张秀清
 var gHosCard = document.createElement("input");
 gHosCard.type = "text";
-gHosCard.value = "0001881321";
+gHosCard.value = "0001881318";
 document.body.appendChild(gHosCard);
 //开始预约按钮
 var gBtnExecJS = document.createElement("input");
