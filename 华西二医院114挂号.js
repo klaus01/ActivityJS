@@ -49,7 +49,7 @@ function Registered() {
             cardNo:0,
             dutyTime:1,
             rbTime:0,
-            codevalue:gVerificationCode.value,
+            codevalue:$.cookie('CheckRegCode'),
             excode:gCardInfoJson.code,
             useridkey:gCardInfoJson.useridkey
         },
@@ -66,13 +66,6 @@ function Registered() {
 var gWorkID = "", gCardInfoJson = null, gRefreshPBInterval = null;
 //医院ID、科室名称、医生名称
 const C_hosid = getUrlParam("hosid"), C_deptid = getUrlParam("deptid"), C_docid = getUrlParam("docid");
-//把验证码显示出来
-document.body.appendChild(document.getElementById("img1"));
-//验证码输入框
-var gVerificationCode = document.createElement("input");
-gVerificationCode.type = "text";
-gVerificationCode.value = "";
-document.body.appendChild(gVerificationCode);
 //预约日期输入框
 var gGHDate = document.createElement("input");
 gGHDate.type = "text";
