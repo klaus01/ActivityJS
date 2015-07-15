@@ -7,9 +7,9 @@
 		"Email":"String content",
 		"NickName":"String content",
 		"Password":"String content",
-		"Sex":0,
+		"Sex":2,
 		"UDID":"String content",
 		"UserId":775807,
-    "Description":"fdsafdsa"
-  }
+		"Description":"fdsafdsa"
+	}
 }
