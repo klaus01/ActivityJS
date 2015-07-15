@@ -1,0 +1,15 @@
+{
+	"isSuc":true,
+	"message":"String content",
+	"result":{
+		"Avatar":"String content",
+		"CreateDate":"/Date(1402932598000)/",
+		"Email":"String content",
+		"NickName":"String content",
+		"Password":"String content",
+		"Sex":0,
+		"UDID":"String content",
+		"UserId":775807,
+    "Description":"fdsafdsa"
+  }
+}
